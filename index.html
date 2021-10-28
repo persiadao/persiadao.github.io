@@ -1,117 +1,536 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Your description">
-    <meta name="author" content="Your name">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Persia Finance</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Google Web Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Coustard' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet'
+        type='text/css'>
+    <style>
+        body{
+	background:#000;
+	color:#fff;
+	font:18px/28px 'Raleway', sans-serif;
+	font-weight:300;
+}
 
-    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+/* General  */
 
-    <!-- Webpage Title -->
-    <title>Petals Webpage Title</title>
-    
-    <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome-all.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
+a, a:hover, a:focus{
+	color:#fff;
+}
+a:hover{
+}
+a:focus{
+	outline:none;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family:'Coustard', sans-serif;
+	margin:0;
+	padding:0;
+	font-weight:300;
+}
+h1{
+	font-size:72px;
+}
+h2{
+	font-size:40px;
+}
+h3{
+	font-size:36px;
+}
+h4{
+	font-size:30px;
+}
+h5{
+	font-size:24px;
+}
+h6{
+	font-size:18px;
+}
+
+
+.loader {
+	position:fixed;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:9999;
+	background:#000 url(../images/loader.gif) 50% 50% no-repeat;
+}
+
+/* Header  */
+
+#header{
+    height: 100vh;
+}
+	.header-overlay{
+		background:rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;	
+	}
+
+
+	.logo{
+		text-align:center;
+		padding:30px 0;
+		background:#05c3f9;
+		width:12%;
+		margin:0 auto;
+	}
 	
-	<!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
+
+/* Main Heading Style Starts */
+
+	.main-head{
+		text-align:center;
+		padding:0 0 40px;
+	}
+		.main-head h2, .main-head p{
+		}
+		.main-head h2{
+			padding:0 0 20px;
+		}
+		.main-head p{
+			font-size:24px;
+			line-height:36px;
+		}
+		
+
+/* Services */
+
+
+    </style>
 </head>
-<body>
-    
-    <!-- Header -->
-    <header id="header" class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-container">
-                        <div class="countdown">
-                            <span id="clock"></span>
-                        </div> <!-- end of countdown -->
-
-                        <h1>Project Coming Soon</h1>
-                        <p class="p-large">We love to create dependable business solutions for companies of all sizes and any industry. Our goal is to improve accuracy and efficiency to reduce operational costs</p>
+<body >
+    <!-- Preloader Starts -->
+    <div class="loader">
+    </div>
+    <!-- Preloader Ends -->
+    <!-- Header Section Starts -->
+    <header id="header">
+        <div class="header-overlay">
+            <div class="container">
+                <!-- Logo Starts -->
+                <div style="display: flex; justify-content: center; align-items: center;"data-scroll-reveal="enter top and move 50px over 1.2s">
+                    <svg width="100%" height="211" viewBox="0 0 1086 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="105.055" cy="105.055" r="105.055" fill="black"/>
+                        <path d="M354.483 92.9196C354.483 97.289 353.48 101.3 351.475 104.953C349.469 108.535 346.389 111.436 342.234 113.656C338.08 115.877 332.922 116.987 326.762 116.987H315.373V144.063H297V68.637H326.762C332.779 68.637 337.865 69.6757 342.019 71.7529C346.174 73.8302 349.29 76.6954 351.367 80.3485C353.444 84.0016 354.483 88.192 354.483 92.9196ZM325.365 102.375C328.875 102.375 331.49 101.551 333.209 99.9035C334.928 98.256 335.788 95.928 335.788 92.9196C335.788 89.9111 334.928 87.5831 333.209 85.9357C331.49 84.2882 328.875 83.4644 325.365 83.4644H315.373V102.375H325.365Z" fill="#BC7A4E"/>
+                        <path d="M420.564 113.119C420.564 114.838 420.457 116.629 420.242 118.491H378.661C378.947 122.216 380.129 125.081 382.206 127.087C384.355 129.021 386.97 129.988 390.05 129.988C394.634 129.988 397.822 128.054 399.612 124.186H419.167C418.164 128.126 416.338 131.671 413.688 134.823C411.109 137.975 407.85 140.446 403.91 142.237C399.97 144.027 395.565 144.923 390.694 144.923C384.821 144.923 379.592 143.669 375.007 141.162C370.423 138.655 366.842 135.074 364.263 130.418C361.684 125.762 360.395 120.318 360.395 114.086C360.395 107.854 361.648 102.411 364.156 97.7546C366.734 93.0986 370.316 89.5171 374.9 87.0101C379.484 84.5031 384.749 83.2495 390.694 83.2495C396.496 83.2495 401.654 84.4672 406.166 86.9027C410.679 89.3381 414.189 92.8121 416.696 97.3248C419.275 101.837 420.564 107.102 420.564 113.119ZM401.761 108.284C401.761 105.132 400.687 102.625 398.538 100.763C396.389 98.9007 393.703 97.9695 390.48 97.9695C387.399 97.9695 384.785 98.8648 382.636 100.656C380.559 102.446 379.269 104.989 378.768 108.284H401.761Z" fill="#BC7A4E"/>
+                        <path d="M448.63 94.1015C450.779 90.8065 453.465 88.2278 456.688 86.3654C459.912 84.4314 463.493 83.4644 467.433 83.4644V102.912H462.383C457.798 102.912 454.36 103.915 452.068 105.92C449.776 107.854 448.63 111.293 448.63 116.235V144.063H430.257V84.1091H448.63V94.1015Z" fill="#BC7A4E"/>
+                        <path d="M500.605 144.923C495.376 144.923 490.72 144.027 486.637 142.237C482.554 140.446 479.33 138.011 476.967 134.93C474.603 131.779 473.278 128.269 472.991 124.401H491.149C491.364 126.478 492.331 128.161 494.05 129.451C495.77 130.74 497.883 131.385 500.39 131.385C502.682 131.385 504.437 130.955 505.654 130.095C506.944 129.164 507.588 127.982 507.588 126.55C507.588 124.831 506.693 123.577 504.902 122.789C503.112 121.93 500.211 120.998 496.199 119.996C491.902 118.993 488.32 117.954 485.455 116.88C482.59 115.734 480.118 113.979 478.041 111.615C475.964 109.18 474.925 105.92 474.925 101.837C474.925 98.3993 475.856 95.2834 477.719 92.4898C479.653 89.6246 482.446 87.3683 486.1 85.7208C489.824 84.0733 494.229 83.2495 499.315 83.2495C506.836 83.2495 512.746 85.1119 517.044 88.8367C521.413 92.5614 523.92 97.5039 524.565 103.664H507.588C507.302 101.587 506.371 99.9393 504.795 98.7216C503.291 97.5039 501.285 96.895 498.778 96.895C496.629 96.895 494.982 97.3248 493.836 98.1844C492.689 98.9723 492.116 100.083 492.116 101.515C492.116 103.234 493.012 104.524 494.803 105.383C496.665 106.243 499.53 107.102 503.398 107.962C507.839 109.108 511.456 110.254 514.25 111.4C517.044 112.475 519.479 114.265 521.556 116.772C523.705 119.208 524.815 122.503 524.887 126.657C524.887 130.167 523.884 133.319 521.879 136.112C519.945 138.834 517.115 140.983 513.39 142.559C509.737 144.135 505.475 144.923 500.605 144.923Z" fill="#BC7A4E"/>
+                        <path d="M545.368 77.8773C542.145 77.8773 539.494 76.9461 537.417 75.0837C535.411 73.1497 534.409 70.7859 534.409 67.9924C534.409 65.1272 535.411 62.7634 537.417 60.901C539.494 58.967 542.145 58 545.368 58C548.52 58 551.098 58.967 553.104 60.901C555.181 62.7634 556.22 65.1272 556.22 67.9924C556.22 70.7859 555.181 73.1497 553.104 75.0837C551.098 76.9461 548.52 77.8773 545.368 77.8773ZM554.501 84.1091V144.063H536.128V84.1091H554.501Z" fill="#BC7A4E"/>
+                        <path d="M564.162 113.979C564.162 107.819 565.308 102.411 567.601 97.7546C569.964 93.0986 573.152 89.5171 577.163 87.0101C581.174 84.5031 585.651 83.2495 590.594 83.2495C594.82 83.2495 598.509 84.1091 601.661 85.8282C604.884 87.5473 607.355 89.8037 609.074 92.5972V84.1091H627.447V144.063H609.074V135.575C607.284 138.369 604.777 140.625 601.553 142.344C598.401 144.063 594.712 144.923 590.486 144.923C585.616 144.923 581.174 143.669 577.163 141.162C573.152 138.584 569.964 134.966 567.601 130.31C565.308 125.583 564.162 120.139 564.162 113.979ZM609.074 114.086C609.074 109.502 607.785 105.885 605.206 103.234C602.699 100.584 599.619 99.2588 595.966 99.2588C592.313 99.2588 589.197 100.584 586.618 103.234C584.111 105.813 582.858 109.394 582.858 113.979C582.858 118.563 584.111 122.216 586.618 124.938C589.197 127.588 592.313 128.914 595.966 128.914C599.619 128.914 602.699 127.588 605.206 124.938C607.785 122.288 609.074 118.671 609.074 114.086Z" fill="#BC7A4E"/>
+                        <path d="M705.01 68.637V83.357H674.281V99.2588H697.274V113.549H674.281V144.063H655.908V68.637H705.01Z" fill="#BC7A4E"/>
+                        <path d="M723.907 77.8773C720.684 77.8773 718.033 76.9461 715.956 75.0837C713.95 73.1497 712.948 70.7859 712.948 67.9924C712.948 65.1272 713.95 62.7634 715.956 60.901C718.033 58.967 720.684 58 723.907 58C727.059 58 729.637 58.967 731.643 60.901C733.72 62.7634 734.759 65.1272 734.759 67.9924C734.759 70.7859 733.72 73.1497 731.643 75.0837C729.637 76.9461 727.059 77.8773 723.907 77.8773ZM733.04 84.1091V144.063H714.667V84.1091H733.04Z" fill="#BC7A4E"/>
+                        <path d="M782.886 83.4644C789.906 83.4644 795.493 85.7566 799.647 90.3409C803.873 94.8536 805.986 101.085 805.986 109.036V144.063H787.721V111.508C787.721 107.496 786.682 104.38 784.605 102.16C782.528 99.9393 779.734 98.829 776.224 98.829C772.714 98.829 769.921 99.9393 767.844 102.16C765.766 104.38 764.728 107.496 764.728 111.508V144.063H746.355V84.1091H764.728V92.06C766.59 89.4097 769.097 87.3324 772.249 85.8282C775.4 84.2524 778.946 83.4644 782.886 83.4644Z" fill="#BC7A4E"/>
+                        <path d="M815.101 113.979C815.101 107.819 816.247 102.411 818.539 97.7546C820.903 93.0986 824.09 89.5171 828.102 87.0101C832.113 84.5031 836.59 83.2495 841.532 83.2495C845.758 83.2495 849.447 84.1091 852.599 85.8282C855.822 87.5473 858.294 89.8037 860.013 92.5972V84.1091H878.386V144.063H860.013V135.575C858.222 138.369 855.715 140.625 852.492 142.344C849.34 144.063 845.651 144.923 841.425 144.923C836.554 144.923 832.113 143.669 828.102 141.162C824.09 138.584 820.903 134.966 818.539 130.31C816.247 125.583 815.101 120.139 815.101 113.979ZM860.013 114.086C860.013 109.502 858.723 105.885 856.145 103.234C853.638 100.584 850.558 99.2588 846.904 99.2588C843.251 99.2588 840.135 100.584 837.557 103.234C835.05 105.813 833.796 109.394 833.796 113.979C833.796 118.563 835.05 122.216 837.557 124.938C840.135 127.588 843.251 128.914 846.904 128.914C850.558 128.914 853.638 127.588 856.145 124.938C858.723 122.288 860.013 118.671 860.013 114.086Z" fill="#BC7A4E"/>
+                        <path d="M928.209 83.4644C935.229 83.4644 940.816 85.7566 944.97 90.3409C949.197 94.8536 951.31 101.085 951.31 109.036V144.063H933.044V111.508C933.044 107.496 932.005 104.38 929.928 102.16C927.851 99.9393 925.057 98.829 921.547 98.829C918.038 98.829 915.244 99.9393 913.167 102.16C911.09 104.38 910.051 107.496 910.051 111.508V144.063H891.678V84.1091H910.051V92.06C911.913 89.4097 914.42 87.3324 917.572 85.8282C920.724 84.2524 924.269 83.4644 928.209 83.4644Z" fill="#BC7A4E"/>
+                        <path d="M960.424 114.086C960.424 107.854 961.678 102.411 964.185 97.7546C966.763 93.0986 970.309 89.5171 974.822 87.0101C979.406 84.5031 984.635 83.2495 990.509 83.2495C998.03 83.2495 1004.3 85.2194 1009.31 89.159C1014.4 93.0986 1017.73 98.65 1019.3 105.813H999.749C998.101 101.229 994.914 98.9365 990.186 98.9365C986.82 98.9365 984.134 100.262 982.128 102.912C980.122 105.491 979.119 109.215 979.119 114.086C979.119 118.957 980.122 122.718 982.128 125.368C984.134 127.947 986.82 129.236 990.186 129.236C994.914 129.236 998.101 126.944 999.749 122.359H1019.3C1017.73 129.379 1014.4 134.895 1009.31 138.906C1004.23 142.917 997.958 144.923 990.509 144.923C984.635 144.923 979.406 143.669 974.822 141.162C970.309 138.655 966.763 135.074 964.185 130.418C961.678 125.762 960.424 120.318 960.424 114.086Z" fill="#BC7A4E"/>
+                        <path d="M1085.65 113.119C1085.65 114.838 1085.54 116.629 1085.33 118.491H1043.74C1044.03 122.216 1045.21 125.081 1047.29 127.087C1049.44 129.021 1052.05 129.988 1055.13 129.988C1059.72 129.988 1062.91 128.054 1064.7 124.186H1084.25C1083.25 128.126 1081.42 131.671 1078.77 134.823C1076.19 137.975 1072.93 140.446 1068.99 142.237C1065.05 144.027 1060.65 144.923 1055.78 144.923C1049.9 144.923 1044.68 143.669 1040.09 141.162C1035.51 138.655 1031.93 135.074 1029.35 130.418C1026.77 125.762 1025.48 120.318 1025.48 114.086C1025.48 107.854 1026.73 102.411 1029.24 97.7546C1031.82 93.0986 1035.4 89.5171 1039.98 87.0101C1044.57 84.5031 1049.83 83.2495 1055.78 83.2495C1061.58 83.2495 1066.74 84.4672 1071.25 86.9027C1075.76 89.3381 1079.27 92.8121 1081.78 97.3248C1084.36 101.837 1085.65 107.102 1085.65 113.119ZM1066.84 108.284C1066.84 105.132 1065.77 102.625 1063.62 100.763C1061.47 98.9007 1058.79 97.9695 1055.56 97.9695C1052.48 97.9695 1049.87 98.8648 1047.72 100.656C1045.64 102.446 1044.35 104.989 1043.85 108.284H1066.84Z" fill="#BC7A4E"/>
+                        <path d="M100.8 50.4121C88.4801 55.4719 83.7054 68.3567 89.659 80.4767C91.7222 84.6539 95.1411 88.1252 99.9748 91.0081C104.632 93.8322 102.451 93.8322 96.9096 91.0669C91.6633 88.4194 86.8296 83.4184 84.9433 78.594C83.8233 75.8876 83.5875 74.0049 83.5285 69.5923C83.5285 64.5325 83.7054 63.65 85.4148 60.061C86.5348 57.6488 88.5391 54.8247 90.3075 53.0597C93.1369 50.2356 93.2548 50.0591 91.6633 50.4121C85.4148 51.883 78.9306 57.1193 76.0422 63.0028C74.2149 66.7094 74.097 67.2977 74.097 73.1223C74.097 79.1823 74.1559 79.5353 76.337 83.8891C79.7559 90.7728 86.358 97.2446 93.3138 100.422L95.318 101.363L93.2548 101.069C89.659 100.539 82.7622 96.7151 78.8717 93.1261C70.9138 85.6541 67.8486 74.3579 71.1496 64.6501L71.9749 62.2379L70.737 63.7088C68.7917 66.0622 66.198 72.0045 65.4907 75.7699C64.7833 79.5942 65.137 84.0068 66.4928 89.0077C70.6191 103.716 88.1264 114.777 107.815 115.013C111.175 115.013 113.886 115.13 113.886 115.189C113.886 115.307 113.474 116.131 113.002 117.013C109.23 124.25 118.072 128.486 127.68 124.132C136.051 120.308 140.059 112.659 137.701 105.187C135.697 98.7743 129.743 93.7145 115.242 86.1248C104.101 80.3002 99.3853 75.2992 97.9706 67.7684C96.8506 62.0026 99.6801 55.0601 104.867 50.824C106.99 49.0589 106.99 49.0001 105.634 49.0001C104.808 49.0001 102.627 49.6473 100.8 50.4121Z" fill="#BC7A4E"/>
+                        <path d="M122.905 60.8259C120.842 61.4142 120.253 62.5321 122.021 62.5321C122.552 62.5321 123.377 62.7674 123.789 63.0616C124.261 63.2969 123.141 63.5323 121.137 63.5323C119.251 63.5323 116.952 63.8853 115.95 64.2971L114.181 65.062L116.244 65.5915C119.545 66.474 119.722 67.2388 116.716 67.2388C115.183 67.2388 113.238 67.533 112.295 67.886L110.644 68.5332L113.002 69.5922L115.36 70.5924L112.413 71.0043C110.821 71.2984 108.935 71.7691 108.286 72.1221C107.284 72.6516 107.461 72.8281 109.937 73.5342C111.47 73.946 112.707 74.5343 112.707 74.7697C112.707 75.0639 111.057 75.1815 109.053 75.0639L105.339 74.8285L107.402 76.5936C109.288 78.2409 113.533 80.8297 126.206 88.184C135.579 93.5968 140.472 99.4214 141.474 106.187L141.945 109.306L143.006 106.658C143.714 104.952 144.126 102.128 144.244 98.7154C144.421 93.7733 144.539 93.3615 146.072 92.0671C147.251 91.0081 148.135 90.7727 149.373 91.0081C150.905 91.3022 151.023 91.1846 151.023 89.596C151.023 88.6547 150.728 87.1838 150.434 86.3013C149.844 84.8304 149.726 84.7716 148.724 85.7129C147.015 87.2426 143.655 86.9485 142.24 85.1246C140.589 83.0654 140.707 81.065 142.476 79.3C145.069 76.6524 148.901 77.6526 150.139 81.418L150.787 83.3007L152.202 81.065C152.968 79.8883 153.676 77.5938 153.853 76.064C154.088 73.593 153.912 73.1223 152.733 72.2986C151.966 71.8279 149.608 71.0043 147.545 70.5336C145.541 70.0629 143.773 69.5922 143.714 69.4746C141.827 65.415 137.937 62.8262 131.276 61.0612C127.385 60.061 125.676 60.0022 122.905 60.8259ZM141.297 70.3571C142.829 71.5338 141.533 72.1221 138.526 71.6514C136.227 71.2396 136.168 71.1808 137.171 70.4159C138.585 69.3569 139.882 69.3569 141.297 70.3571Z" fill="#BC7A4E"/>
+                        <path d="M70.2652 105.008C70.2652 107.421 72.3284 111.598 74.2737 113.128C75.0989 113.834 75.5116 114.54 75.2168 114.834C74.9221 115.069 72.3873 117.011 69.6168 119.188C63.84 123.6 59.7726 128.601 57.8274 133.602C56.7663 136.25 56.4716 138.544 56.2358 144.722L56 152.488L60.3032 152.665L64.6653 152.841L64.8421 156.783L65.0189 160.784H88.5979H112.177L111.823 159.43C111.234 157.371 109.524 155.312 107.343 154.018C105.516 152.959 104.101 152.841 93.0778 152.665L80.7579 152.488L84.2358 150.782C88.1263 148.899 91.0147 146.193 92.3115 143.016C94.3157 138.25 92.901 131.955 89.0105 128.307L87.0652 126.483L88.8336 127.424C91.3094 128.719 93.5494 131.249 94.9642 134.308C97.1452 139.074 96.3199 144.369 92.7831 148.487C91.1915 150.311 90.9557 150.841 91.84 150.605C92.4294 150.429 99.8568 148.899 108.227 147.311C116.598 145.663 123.613 144.251 123.73 144.075C123.848 143.957 123.023 141.427 121.903 138.427C120.724 135.426 119.781 131.955 119.781 130.719V128.425H116.893C112.059 128.425 108.581 125.248 108.581 120.776V118.658L104.337 118.482C99.562 118.305 95.7305 117.658 91.0147 116.305L87.8905 115.422L85.4147 117.364C76.7494 124.071 70.6779 129.131 69.381 130.66C66.7284 133.779 65.3726 137.72 65.0779 142.957L64.7831 147.84H62.8379H60.8337V144.604C60.8337 138.309 62.661 132.896 66.2568 128.307C67.2 127.071 71.5621 123.424 75.9242 120.129C80.2863 116.834 83.8231 113.951 83.8231 113.775C83.8231 113.598 82.5852 112.775 81.0526 111.951C79.52 111.127 76.5137 108.833 74.3916 106.832C72.3284 104.773 70.501 103.126 70.4421 103.126C70.3242 103.126 70.2652 103.949 70.2652 105.008Z" fill="#BC7A4E"/>
+                        <path d="M139.646 116.66C137.524 121.308 130.509 126.544 125.027 127.544C123.848 127.78 122.61 128.133 122.257 128.368C121.608 128.721 126.619 142.429 133.751 160.021C134.164 161.021 151.023 161.139 151.023 160.198C151.023 157.609 147.427 154.079 143.89 153.137L141.591 152.49V133.428C141.591 122.896 141.415 114.306 141.179 114.306C140.884 114.306 140.236 115.366 139.646 116.66Z" fill="#BC7A4E"/>
+                        </svg>
                         
-                        <!-- Sign Up Form -->
-                        <form id="signUpForm">
-                            <div class="form-group">
-                                <input type="email" class="form-control-input" id="semail" required>
-                                <label class="label-control" for="semail">Email address</label>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">SIGN UP</button>
-                            </div>
-                        </form>
-                        <!-- end of sign up form -->
+                </div>
+                <!-- Logo Ends -->
+                <!-- Main Heading Starts -->
+                <div class="main-head">
+                    <h2 data-scroll-reveal="enter left and move 50px over 1.8s">
+                        Something awesome is coming soon</h2>
+                    <p data-scroll-reveal="enter right and move 50px over 2.0s">
+                        We are building something very cool. Stay tuned and be patient. Your patience will
+                        be well paid.</p>
+                </div>
+                <!-- Main Heading Ends -->
+            </div>
+           
+        </div>
+    </header>
+    <!-- Header Section Ends -->
+   
+    </section>
+    <!-- Bootstrap core JavaScript -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.1.18/jquery.backstretch.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.scrollReveal = (function (window) {
 
-                    </div> <!-- end of text-container -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
+'use strict';
 
-        <!-- Social Links -->
-        <div class="social-container">
-            
-            <!-- Text Logo - Use this if you don't have a graphic logo -->
-            <!-- <a class="logo-text" href="index.html">Petals</a> -->
+function scrollReveal(options) {
 
-            <!-- Image Logo -->
-            <a href="index.html"><img class="logo-image" src="images/logo.svg" alt="alternative"></a> 
-            
-            <span class="fa-stack">
-                <a href="#your-link">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x"></i>
-                </a>
-            </span>
-            <span class="fa-stack">
-                <a href="#your-link">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x"></i>
-                </a>
-            </span>
-            <span class="fa-stack">
-                <a href="#your-link">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                </a>
-            </span>
-            <span class="fa-stack">
-                <a href="#your-link">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-instagram fa-stack-1x"></i>
-                </a>
-            </span>
-            <span class="fa-stack">
-                <a href="#your-link">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                </a>
-            </span>
-        </div> <!-- end of social-container -->
-        <!-- end of social links -->
-        
-    </header> <!-- end of header -->
-    <!-- end of header -->
+    this.docElem = window.document.documentElement;
+    this.options = this.extend(this.defaults, options);
+    this.styleBank = [];
+
+    if (this.options.init == true) this.init();
+}
+
+scrollReveal.prototype = {
+
+  defaults: {
+    after:  '0s',
+    enter:  'bottom',
+    move:   '24px',
+    over:   '0.66s',
+    easing: 'ease-in-out',
+
+//  if 0, the element is considered in the viewport as soon as it enters
+//  if 1, the element is considered in the viewport when it's fully visible
+    viewportFactor: 0.33,
+
+// if false, animations occur only once
+// if true, animations occur each time an element enters the viewport
+    reset: false,
+
+// if true, scrollReveal.init() is automaticaly called upon instantiation
+    init: true
+  },
+
+  /*=============================================================================*/
+
+  init: function () {
+
+    this.scrolled = false;
+
+    var self = this;
+
+//  Check DOM for the data-scrollReveal attribute
+//  and initialize all found elements.
+    this.elems = Array.prototype.slice.call(this.docElem.querySelectorAll('[data-scroll-reveal]'));
+    this.elems.forEach(function (el, i) {
+
+  //  Capture original style attribute
+      if (!self.styleBank[el]) {
+        self.styleBank[el] = el.getAttribute('style');
+      }
+
+      self.update(el);
+    });
+
+    var scrollHandler = function () {
+      if (!self.scrolled) {
+        self.scrolled = true;
+        setTimeout(function () {
+          self._scrollPage();
+        }, 60);
+      }
+    };
+
+    var resizeHandler = function () {
+
+  //  If we’re still waiting for settimeout, reset the timer.
+      if (self.resizeTimeout) {
+        clearTimeout(self.resizeTimeout);
+      }
+      function delayed() {
+        self._scrollPage();
+        self.resizeTimeout = null;
+      }
+      self.resizeTimeout = setTimeout(delayed, 200);
+    };
+
+    window.addEventListener('scroll', scrollHandler, false);
+    window.addEventListener('resize', resizeHandler, false);
+  },
+
+  /*=============================================================================*/
+
+  _scrollPage: function () {
+      var self = this;
+
+      this.elems.forEach(function (el, i) {
+        self.update(el);
+      });
+      this.scrolled = false;
+  },
+
+  /*=============================================================================*/
+
+  parseLanguage: function (el) {
+
+//  Splits on a sequence of one or more commas or spaces.
+    var words = el.getAttribute('data-scroll-reveal').split(/[, ]+/),
+        parsed = {};
+
+    function filter (words) {
+      var ret = [],
+
+          blacklist = [
+            "from",
+            "the",
+            "and",
+            "then",
+            "but",
+            "with"
+          ];
+
+      words.forEach(function (word, i) {
+        if (blacklist.indexOf(word) > -1) {
+          return;
+        }
+        ret.push(word);
+      });
+
+      return ret;
+    }
+
+    words = filter(words);
+
+    words.forEach(function (word, i) {
+
+      switch (word) {
+        case "enter":
+          parsed.enter = words[i + 1];
+          return;
+
+        case "after":
+          parsed.after = words[i + 1];
+          return;
+
+        case "wait":
+          parsed.after = words[i + 1];
+          return;
+
+        case "move":
+          parsed.move = words[i + 1];
+          return;
+
+        case "ease":
+          parsed.move = words[i + 1];
+          parsed.ease = "ease";
+          return;
+
+        case "ease-in":
+          parsed.move = words[i + 1];
+          parsed.easing = "ease-in";
+          return;
+
+        case "ease-in-out":
+          parsed.move = words[i + 1];
+          parsed.easing = "ease-in-out";
+          return;
+
+        case "ease-out":
+          parsed.move = words[i + 1];
+          parsed.easing = "ease-out";
+          return;
+
+        case "over":
+          parsed.over = words[i + 1];
+          return;
+
+        default:
+          return;
+      }
+    });
+
+    return parsed;
+  },
 
 
-    <!-- Scripts -->
-    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="js/jquery.countdown.min.js"></script> <!-- The Final Countdown plugin for jQuery -->
-    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+  /*=============================================================================*/
+
+  update: function (el) {
+
+    var css   = this.genCSS(el);
+    var style = this.styleBank[el];
+
+    if (style != null) style += ";"; else style = "";
+
+    if (!el.getAttribute('data-scroll-reveal-initialized')) {
+      el.setAttribute('style', style + css.initial);
+      el.setAttribute('data-scroll-reveal-initialized', true);
+    }
+
+    if (!this.isElementInViewport(el, this.options.viewportFactor)) {
+      if (this.options.reset) {
+        el.setAttribute('style', style + css.initial + css.reset);
+      }
+      return;
+    }
+
+    if (el.getAttribute('data-scroll-reveal-complete')) return;
+
+    if (this.isElementInViewport(el, this.options.viewportFactor)) {
+      el.setAttribute('style', style + css.target + css.transition);
+  //  Without reset enabled, we can safely remove the style tag
+  //  to prevent CSS specificy wars with authored CSS.
+      if (!this.options.reset) {
+        setTimeout(function () {
+          if (style != "") {
+            el.setAttribute('style', style);
+          } else {
+            el.removeAttribute('style');
+          }
+          el.setAttribute('data-scroll-reveal-complete',true);
+        }, css.totalDuration);
+      }
+    return;
+    }
+  },
+
+  /*=============================================================================*/
+
+  genCSS: function (el) {
+    var parsed = this.parseLanguage(el),
+        enter,
+        axis;
+
+    if (parsed.enter) {
+
+      if (parsed.enter == "top" || parsed.enter == "bottom") {
+        enter = parsed.enter;
+        axis = "y";
+      }
+
+      if (parsed.enter == "left" || parsed.enter == "right") {
+        enter = parsed.enter;
+        axis = "x";
+      }
+
+    } else {
+
+      if (this.options.enter == "top" || this.options.enter == "bottom") {
+        enter = this.options.enter
+        axis = "y";
+      }
+
+      if (this.options.enter == "left" || this.options.enter == "right") {
+        enter = this.options.enter
+        axis = "x";
+      }
+    }
+
+//  After all values are parsed, let’s make sure our our
+//  pixel distance is negative for top and left entrances.
+//
+//  ie. "move 25px from top" starts at 'top: -25px' in CSS.
+
+    if (enter == "top" || enter == "left") {
+      if (parsed.move) {
+        parsed.move = "-" + parsed.move;
+      }
+      else {
+        parsed.move = "-" + this.options.move;
+      }
+    }
+
+    var dist   = parsed.move    || this.options.move,
+        dur    = parsed.over    || this.options.over,
+        delay  = parsed.after   || this.options.after,
+        easing = parsed.easing  || this.options.easing;
+
+    var transition = "-webkit-transition: -webkit-transform " + dur + " " + easing + " " + delay + ",  opacity " + dur + " " + easing + " " + delay + ";" +
+                             "transition: transform " + dur + " " + easing + " " + delay + ", opacity " + dur + " " + easing + " " + delay + ";" +
+                    "-webkit-perspective: 1000;" +
+            "-webkit-backface-visibility: hidden;";
+
+//  The same as transition, but removing the delay for elements fading out.
+    var reset = "-webkit-transition: -webkit-transform " + dur + " " + easing + " 0s,  opacity " + dur + " " + easing + " " + delay + ";" +
+                        "transition: transform " + dur + " " + easing + " 0s,  opacity " + dur + " " + easing + " " + delay + ";" +
+               "-webkit-perspective: 1000;" +
+       "-webkit-backface-visibility: hidden;";
+
+    var initial = "-webkit-transform: translate" + axis + "(" + dist + ");" +
+                          "transform: translate" + axis + "(" + dist + ");" +
+                            "opacity: 0;";
+
+    var target = "-webkit-transform: translate" + axis + "(0);" +
+                         "transform: translate" + axis + "(0);" +
+                           "opacity: 1;";
+    return {
+      transition: transition,
+      initial: initial,
+      target: target,
+      reset: reset,
+      totalDuration: ((parseFloat(dur) + parseFloat(delay)) * 1000)
+    };
+  },
+
+  getViewportH : function () {
+    var client = this.docElem['clientHeight'],
+      inner = window['innerHeight'];
+
+    return (client < inner) ? inner : client;
+  },
+
+  getOffset : function(el) {
+    var offsetTop = 0,
+        offsetLeft = 0;
+
+    do {
+      if (!isNaN(el.offsetTop)) {
+        offsetTop += el.offsetTop;
+      }
+      if (!isNaN(el.offsetLeft)) {
+        offsetLeft += el.offsetLeft;
+      }
+    } while (el = el.offsetParent)
+
+    return {
+      top: offsetTop,
+      left: offsetLeft
+    }
+  },
+
+  isElementInViewport : function(el, h) {
+    var scrolled = window.pageYOffset,
+        viewed = scrolled + this.getViewportH(),
+        elH = el.offsetHeight,
+        elTop = this.getOffset(el).top,
+        elBottom = elTop + elH,
+        h = h || 0;
+
+    return (elTop + elH * h) <= viewed
+        && (elBottom) >= scrolled
+        || (el.currentStyle? el.currentStyle : window.getComputedStyle(el, null)).position == 'fixed';
+  },
+
+  extend: function (a, b){
+    for (var key in b) {
+      if (b.hasOwnProperty(key)) {
+        a[key] = b[key];
+      }
+    }
+    return a;
+  }
+}; // end scrollReveal.prototype
+
+return scrollReveal;
+})(window);
+    </script>
+    <script type="text/javascript">
+    $(function() {
+	window.scrollReveal = new scrollReveal();
+	"use strict";
+	
+	// PreLoader
+	$(window).load(function() {
+		$(".loader").fadeOut(400);
+	});
+
+	// Backstretchs
+	$("#header").backstretch("./3.jpg");
+	$("#services").backstretch("./3.jpg");		
+    
+    });
+    </script>
+	
+	
 </body>
 </html>
